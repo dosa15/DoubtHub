@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</head>
+
+<body onload="display()">
+    <!--navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style="float: right;">
+        <a class="navbar-brand" href="#"><b>DoubtHub</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Contact">Quries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign Up</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+    <!--Main Page-->
+    <center>
+        <h1 class="ml11">
+            <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span class="letters">DoubtHub</span>
+            </span>
+        </h1>
+        <h1 class="ml3">Ask Your Doubt ?</h1>
+        <br>
+        <div class="wrapper">
+            <div class="face"></div>
+            <div class="face"></div>
+            <div class="face"></div>
+            <div class="face"></div>
+            <div class="face"></div>
+            <div class="face"></div>
+        </div>
+        <section id="About">
+            <div id="about-section">
+                <div class="about">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, laudantium, velit earum fugit
+                    possimus maxime ipsa,
+                    vero delectus illo pariatur omnis reprehenderit. Eius enim nobis officiis qui ratione minima
+                    asperiores.
+                </div>
+                <div class="about">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, laudantium, velit earum fugit
+                    possimus maxime ipsa,
+                    vero delectus illo pariatur omnis reprehenderit. Eius enim nobis officiis qui ratione minima
+                    asperiores.
+                </div>
+                <div class="about">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, laudantium, velit earum fugit
+                    possimus maxime ipsa,
+                    vero delectus illo pariatur omnis reprehenderit. Eius enim nobis officiis qui ratione minima
+                    asperiores.
+                </div>
+            </div>
+        </section>
+        <section class="test" id="Contact">
+            <center>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="description">
+                            <h1>Please Fill this Form</h1>
+                            <label style="font-size:30px" class="fa">&#xf0e0;</label>
+                            <input type="text" name="" placeholder="Email"><br>
+                            <label style="font-size:30px" class="fa">&#xf095;</label>
+                            <input type="text" name="" placeholder="Phone Number"><br>
+                            <label style="font-size:30px" class="fa">&#xf059;</label>
+                            <input type="text" name="" placeholder="Quries"><br>
+                            <button type="button" class="btn btn-light" style="margin: 10px;">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </section>
+    </center>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+
+        function doubt() {
+            var textWrapper = document.querySelector('.ml3');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+            var x = 1;
+            anime.timeline({ loop: true })
+                .add({
+                    targets: '.ml3 .letter',
+                    opacity: [0, 1],
+                    easing: "easeInOutQuad",
+                    duration: 2250,
+                    delay: (el, i) => 150 * (i + 1)
+                }).add({
+                    targets: '.ml3',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 1000
+                });
+            return;
+        }
+        var textWrapper = document.querySelector('.ml11 .letters');
+        function display() {
+
+            textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+            var x = 1;
+            anime.timeline({ loop: true })
+                .add({
+                    targets: '.ml11 .line',
+                    scaleY: [0, 1],
+                    opacity: [0.5, 1],
+                    easing: "easeOutExpo",
+                    duration: 700
+                })
+                .add({
+                    targets: '.ml11 .line',
+                    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+                    easing: "easeOutExpo",
+                    duration: 700,
+                    delay: 100
+                }).add({
+                    targets: '.ml11 .letter',
+                    opacity: [0, 1],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=775',
+                    delay: (el, i) => 34 * (i + 1)
+                }).add({
+                    targets: '.ml11',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 1000
+                });
+
+            doubt();
+
+
+            return;
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
