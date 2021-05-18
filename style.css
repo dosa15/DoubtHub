@@ -6,6 +6,11 @@
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   display: flex;
   align-items: center;
@@ -13,6 +18,22 @@ body{
   min-height: 100vh;
   background: #f7f7f7;
   padding: 0 10px;
+/* }
+.body-homepage { */
+  background: #599fd9;
+  background-image: linear-gradient(
+    135.9deg,
+    rgba(109, 25, 252, 1) 16.4%,
+    rgba(125, 31, 165, 1) 56.1%
+  );
+  align-items: center;
+  justify-content: center;
+
+  perspective: 580px;
+  transition: all 0.5s;
+}
+.body-homepage:hover {
+  perspective: 1500px;
 }
 .wrapper{
   background: #fff;
@@ -21,6 +42,194 @@ body{
   border-radius: 16px;
   box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
               0 32px 64px -48px rgba(0,0,0,0.5);
+}
+.wrapper-homepage {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transition: all 20s;
+  transform: rotateZ(0) rotateX(0) rotateY(0);
+  transform-style: preserve-3d;
+  justify-content: center;
+  margin: 100px;
+  z-index: 1030;
+}
+
+.wrapper-homepage:hover {
+  transform: rotateZ(360deg) rotateX(360deg) rotateY(360deg);
+}
+
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+.ml11 {
+  margin-top: 75px;
+  font-weight: 700;
+  font-size: 3.5em;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line1 {
+  top: 0;
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 5s;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+}
+.face:nth-child(1) {
+  background-image: url(images/science.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center left;
+  transform: rotateY(90deg) translateX(-100px);
+}
+.face:nth-child(2) {
+  background-image: url(images/geography.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center right;
+  transform: rotateY(-90deg) translateX(100px);
+}
+.face:nth-child(3) {
+  background-image: url(images/history.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center top;
+  transform: rotateX(-90deg) translateY(-100px);
+}
+.face:nth-child(4) {
+  background-image: url(images/english.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: rotateX(90deg) translateY(100px);
+}
+.face:nth-child(5) {
+  background-image: url(images/bio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: translateZ(-100px);
+}
+.face:nth-child(6) {
+  background-image: url(images/maths.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: translateZ(100px);
+}
+
+.description {
+  background-color: #f2336c;
+  box-shadow: 1px 1px #888888;
+  border-radius: 10px;
+  margin: 100px;
+  width: 75%;
+}
+.description h1 {
+  background-color: #7c33f2;
+  text-align: center;
+  font-family: "Sofia";
+}
+.description i {
+  position: absolute;
+  padding: 10px;
+}
+.description > input {
+  padding: 10px;
+}
+.input-homepage {
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f2336c;
+  box-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px darkblue;
+}
+i {
+  color: white;
+  opacity: 0.5;
+  font-size: 1.3rem;
+}
+::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-size: 22px;
+}
+
+#About {
+  width: 80%;
+  border: 2px solid black;
+  box-shadow: 15px 15px rgba(0, 0, 0, 0.4);
+  margin: 30px;
+}
+#about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: 50px;
+}
+
+.about {
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(
+    135.9deg,
+    rgb(251, 255, 0) 16.4%,
+    rgb(17, 221, 211) 56.1%
+  );
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
 /* Login & Signup Form CSS Start */
